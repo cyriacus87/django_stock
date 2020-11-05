@@ -1,3 +1,5 @@
+#Copyright (c) 2020-2021 Cyriacus Onuigbo All Right Reserved
+
 from django.shortcuts import render, redirect
 from .models import Stock  
 from .forms import StockForm
