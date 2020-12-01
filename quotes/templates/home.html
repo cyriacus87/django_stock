@@ -11,18 +11,30 @@
 		Please try again.... 
 	{% else %}
 
-		<h1>{{ api.companyName}}</h1>
-		Price: ${{ api.latestPrice}}<br/>
-		Previous Close: {{ api.previousClose}}<br/>
-		Market Cap: {{ api.marketCap}}<br/>
-		YTD Change: {{ api.ytdChange}}<br/>
-		52 Wk High: {{ api.week52High}}<br/>
-		52 Wk Low: {{ api.week52Low}}<br/>
+	<br>
+
+	<h1>{{ api.companyName}}</h1>
+<table class="table table-striped table table-bordered table table-hover">
+  <tbody>
+  	<tr>
+		<td><b>Price:</b> ${{ api.latestPrice}}</td>
+		<td><b>Previous Close:</b> {{ api.previousClose}}</td>
+		<td><b>Market Cap:</b> {{ api.marketCap}}</td>
+		<td><b>YTD Change:</b> {{ api.ytdChange}}</td>
+		<td><b>52 Wk High</b>: {{ api.week52High}}</td>
+		<td><b>52 Wk Low:</b> {{ api.week52Low}}</td>
+	</tr>
+  </tbody>
+</table>
 
 	
 
 
 	{% endif %}
 {% endif %}
+<br><br>
+<h1 style="color:blue;"><center>Welcome to AppTech Stock</h3><br><br>
+<h4><center>Enter the Stock Ticker Symbol Above</h4>
+
 
 {% endblock %}

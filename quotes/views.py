@@ -27,6 +27,10 @@ def home(request):
 def about(request):
 	return render(request, 'about.html', {})
 
+def faq(request):
+	return render(request, 'faq.html', {})
+
+
 def add_stock(request):
 	import requests
 	import json
@@ -56,7 +60,9 @@ def delete(request, stock_id):
 	item = Stock.objects.get(pk=stock_id)
 	item.delete()
 	messages.success(request, ("Stock Has Been Deleted!"))
-	return redirect(delete_stock)
+	#return redirect(delete_stock)
+	return redirect(add_stock)
+
 
 def delete_stock(request):
 	ticker = Stock.objects.all()
